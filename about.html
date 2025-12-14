@@ -329,25 +329,25 @@
       <div class="mt-6 flex w-full flex-col justify-between text-white sm:flex-row md:mt-0 md:max-w-[341px]">
         <div class="">
           <p class="text-deutziawhite font-inter text-2xl font-medium leading-normal text-black hover:underline ">Pages</p>
-          <ul>
+                  <ul>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/">Home</a></li>
+                href="index.html">Home</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/our-tutors">Bouquets</a></li>
+                href="bouquets.html">Bouquets</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/become-a-tutor">Bridal</a></li>
+                href="bridal.html">Bridal</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/plans-and-pricing">Event Management</a></li>
+                href="event.html">Event Management</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/terms-and-conditions">About</a></li>
+                href="about.html">About</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/privacy-policy">Contact</a></li>
+                href="contact.html">Contact</a></li>
           </ul>
         </div>
         </div>
@@ -364,5 +364,37 @@
   </div>
 </div>
         </footer>
+
+        <!--========== script start here ========== -->
+         <script>
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-sm");
+          navbar.classList.remove("bg-white/90");
+          navbar.classList.add("bg-white/95");
+        } else {
+          navbar.classList.remove("shadow-sm");
+          navbar.classList.add("bg-white/90");
+          navbar.classList.remove("bg-white/95");
+        }
+      });
+
+      // Simple typewriter effect
+      document.addEventListener("DOMContentLoaded", () => {
+        const typewriter = document.querySelector(".animate-typewriter");
+        typewriter.style.animation =
+          "typewriter 2s steps(16) forwards, blink 1s steps(16) infinite 2s";
+      });
+    //  ==== hamburger menu script ====
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    //  ==== hamburger menu script ends ====
+    </script>
   </body>
 </html>
